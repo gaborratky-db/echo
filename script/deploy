@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -ex
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+cd "$ROOT"
+
+dbfs cp dist/echo-1.0.0-py3-none-any.whl dbfs:/FileStore/wheel/echo-1.0.0-py3-none-any.whl
