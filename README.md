@@ -12,8 +12,8 @@ A minimalistic Python wheel that echoes back the arguments passed to it.
 
 Two entrypoints are defined:
 
-- `echo`: `echo:main` (takes no arguments and echoes `sys.argv[1:]` back)
-- `echo_with_args`: `echo:main_with_args` (takes `*args, **kwargs` and echoes back everything)
+- `echo = echo:main` (takes no arguments and echoes `sys.argv[1:]` back)
+- `echo_with_args = echo:main_with_args` (takes `*args, **kwargs` and echoes back everything)
 
 `echo_with_args` takes optional `*args` and `**kwargs` arguments that can be passed directly.
 
