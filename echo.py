@@ -5,5 +5,6 @@ from argparse import ArgumentError
 
 print('sys.argv[1:]', sys.argv[1:])
 
-if sys.argv[1] == 'throw':
-    raise ArgumentError("💩")
+for arg in sys.argv:
+    if arg == 'throw' or arg == '--throw=poop':
+        raise ArgumentError("💩")
