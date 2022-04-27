@@ -1,11 +1,9 @@
 import sys
 
+from argparse import ArgumentError
+
 
 def main():
     print('sys.argv[1:]', sys.argv[1:])
-
-
-def main_with_args(*args, **kwargs):
-    print('args', args)
-    print('kwargs', kwargs)
-    print('sys.argv[1:]', sys.argv[1:])
+    if sys.argv[1] == 'throw' or sys.argv[1] == '--throw=poop':
+        raise ArgumentError("💩")
