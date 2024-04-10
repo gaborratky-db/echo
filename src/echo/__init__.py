@@ -25,7 +25,8 @@ def parse_with_args():
     parser = ArgumentParser(description='Echo arguments')
     parser.add_argument('args', nargs='*')
     parser.add_argument('--throw', action='store', help='Throw an error')
-    # Only parse known args, ignore unknown arguments:w
+
+    # Only parse known args, ignore unknown arguments
     args, leftovers = parser.parse_known_args()
     print('args', args)
     print('leftovers', leftovers)
