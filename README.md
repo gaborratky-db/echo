@@ -10,10 +10,11 @@ A minimalistic Python wheel that echoes back the arguments passed to it.
 
 ## Entrypoints
 
-Two entrypoints are defined:
+Three entrypoints are defined:
 
 - `echo = echo:main` (takes no arguments and echoes `sys.argv[1:]` back)
 - `echo_with_args = echo:main_with_args` (takes `*args, **kwargs` and echoes back everything)
+- `parse_with_args = echo:parse_with_args` (takes `*args, **kwargs`, parses with ArgumentParser and echoes back everything)
 
 `echo_with_args` takes optional `*args` and `**kwargs` arguments that can be passed directly.
 
@@ -31,6 +32,11 @@ kwargs {}
 sys.argv[1:] ['foo', 'bar']
 ```
 
+$ parse_with_args --foo=bar --throw=nothing
+args Namespace(args=[], throw='nothing')
+leftovers ['--foo=bar']
+
+```
 ### Python
 
 ```python
